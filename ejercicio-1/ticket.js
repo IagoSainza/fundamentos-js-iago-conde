@@ -38,12 +38,16 @@ const cantidad = 2;
 
 const porcentajeIva = 21; 
 
+console.log(`Producto: ${producto}`)
+console.log(`Cantidad: ${cantidad} x ${precio.toFixed(2)} €`)
+
 const subtotal = precio * cantidad;
-console.log(`Subtotal:${subtotal.toFixed(2)}`);
-// IA: me recordó usar el 21 del enunciado y dividir entre 100 (ver IA.md, 13/10)
+console.log(`Subtotal: ${subtotal.toFixed(2)} €`);
+// IA: me recordo usar el 21 del enunciado y dividir entre 100 (ver IA.md, 13/10)
 const iva = subtotal * porcentajeIva / 100;
-console.log(`IVA (21%): ${iva.toFixed(2)}`);
+// IA: me corrigio el console.log de IVA de forma que si el IVA cambia no salga 21%
+console.log(`IVA (${porcentajeIva}%): ${iva.toFixed(2)} €`);
 
 const total = subtotal + iva;
-console.log(`TOTAL: ${total.toFixed(2)}`);
+console.log(`TOTAL: ${total.toFixed(2)} €`);
 
