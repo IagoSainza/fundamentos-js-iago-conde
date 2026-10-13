@@ -35,8 +35,14 @@ Prueba también con otros datos (por ejemplo, 3 unidades de un ratón a 19.90 �
 const producto = "Monitor";
 const precio = 189;
 const cantidad = 2;
-const porcentajeIva = 21;
+
+const porcentajeIva = 21; 
 
 const subtotal = precio * cantidad;
-
 console.log(subtotal);
+// IA: me recordó usar el 21 del enunciado y dividir entre 100 (ver IA.md, 13/10)
+const iva = subtotal * porcentajeIva / 100;
+console.log(iva);
+
+const total = subtotal + iva;
+console.log(total);
