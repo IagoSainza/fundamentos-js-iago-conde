@@ -27,12 +27,13 @@ Fíjate en el caso de 52 €: tiene descuento, pero al aplicarlo baja de 50 € 
 
 const importe = 52;
 let descuento = 0;
+const descuentoMedio = 5
+const descuentoAlto = 10
+if (importe >= 0 && importe <= 50) {descuento = 0;}
 
-if (importe >= 0 && importe <= 50) {console.log("Sin descuento"); descuento = 0;}
+else if (importe > 50 && importe <= 100) {descuento = importe * descuentoMedio / 100;}
 
-else if (importe > 50 && importe <= 100) {console.log("5% de descuento"); descuento = importe * 5 / 100;}
-
-else if (importe > 100) {console.log("10% de descuento"); descuento = importe * 10 / 100;}
+else if (importe > 100) {descuento = importe * descuentoAlto / 100;}
 
 else {console.log ("Valor no valido");}
 
@@ -41,9 +42,15 @@ const importeConDescuento = (importe - descuento)
 const envio = 4.95;
 
 let gastosEnvio= 0; 
+// IA: Me bloqueé con el envío y le pedí ayuda para que el código funcionara (ver IA.md, 14/10)
+if (importeConDescuento >= 50) {gastosEnvio = 0}
 
-if (importeConDescuento >= 50) {console.log("Gratis"); gastosEnvio = 0}
+else {(gastosEnvio = envio);}
 
-else {console.log(gastosEnvio = envio);}
+const total = importeConDescuento + gastosEnvio;
 
-
+console.log(`Importe: ${importe.toFixed(2)}€`)
+console.log(`Descuento: ${descuento.toFixed(2)}€`)
+console.log(`Importe con descuento: ${importeConDescuento.toFixed(2)}€`)
+console.log(`Envío: ${gastosEnvio.toFixed(2)}€`)
+console.log(`Total: ${total.toFixed(2)}€`)
