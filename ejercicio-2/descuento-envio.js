@@ -25,13 +25,20 @@ Importe - Descuento - Importe con descuento - Envío - Total
 Fíjate en el caso de 52 €: tiene descuento, pero al aplicarlo baja de 50 € y sí paga envío. Prueba también los casos límite: 50, 50.01, 100 y 100.01. 
 */
 
-const importe = 100.01
+const importe = 52;
+let descuento = 0;
 
+if (importe >= 0 && importe <= 50) {console.log("Sin descuento"); descuento = 0;}
 
-if (importe >= 0 && importe <= 50) {console.log("Sin descuento")}
+else if (importe > 50 && importe <= 100) {console.log("5% de descuento"); descuento = importe * 5 / 100;}
 
-else if (importe > 50 && importe <= 100) {console.log("5% de descuento")}
+else if (importe > 100) {console.log("10% de descuento"); descuento = importe * 10 / 100;}
 
-else if (importe > 100) {console.log("10% de descuento")}
+else {console.log ("Valor no valido");}
 
-else { console.log ("Valor no valido")}
+const importeConDescuento = (importe - descuento)
+
+const envio = 4.95;
+
+if (importeConDescuento >= 50) {console.log("Gratis");}
+else {console.log(importeConDescuento + envio);}
