@@ -40,5 +40,10 @@ const importeConDescuento = (importe - descuento)
 
 const envio = 4.95;
 
-if (importeConDescuento >= 50) {console.log("Gratis");}
-else {console.log(importeConDescuento + envio);}
+let gastosEnvio= 0; 
+
+if (importeConDescuento >= 50) {console.log("Gratis"); gastosEnvio = 0}
+
+else {console.log(gastosEnvio = envio);}
+
+
