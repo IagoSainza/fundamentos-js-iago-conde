@@ -57,3 +57,10 @@ if (precios[i] > precios[posicionMasCaro]) {
     posicionMasCaro = i;}}
  
  console.log(`Producto más caro: ${productos[posicionMasCaro]} (${precios[posicionMasCaro].toFixed(2)} €)`);
+
+ let valorInventario = 0;
+
+for (let i = 0; i < productos.length; i++)  {
+    valorInventario = valorInventario + precios[i] * stock[i];
+}
+console.log(`Valor del inventario: ${valorInventario.toFixed(2)} €`);
