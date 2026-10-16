@@ -1,13 +1,7 @@
 | 13/10 | Ej. 1 | Claude | Le pedí que revisara mi código del IVA | Me dijo que usara 21 como en el enunciado y dividiera entre 100 | Cambié 0.21 por 21 y añadí / 100 |
-
 | 13/10 | Ej. 1 | Claude | Le pregunté cómo tendría que haber hecho los commits | Me explicó hacer un commit por cada paso que funciona | Rehíce el ejercicio por partes con un commit en cada una |
-
 | 13/10 | Ej. 1 | Claude | Puse textualmente el 21% y me dijo de cambiarlo de forma que si cambia el iva no me salga "21%"| Hice los cambios pertienentes con ${}|
-
 | 14/10 | Ej. 2 | Claude | Me bloqueé con el envío y le pedí ayuda para que el código funcionara | Me explicó que los gastosEnvio solo guarda el 0 o 4.95 y me enseñó el if, también me orientó a separar los cálculos del resumen. | Al final copié el if del envío entendiendo el razonamiento y reorganicé el código poniendo primero los cálculos y después los console.log|
-
 | 16/10 | Ej. 3 | Claude | le pedí el pseudocodigo como apoyo.| Me dio el pseudocódigo de los 4 pasos (catálogo, contador, máximo y acumulador) | Lo usé como guía para escribir el código paso a paso |
-
 | 16/10 | Ej. 3 | Claude | No me salía el template string del catálogo | Me escribió la línea del AGOTADO y me explicó qué va dentro y fuera de ${} | Con ese ejemplo escribí yo la línea de las unidades |
-
 | 16/10 | Ej. 3 | Claude | Me lié colocando el if del más caro fuera del bucle y le pedí ayuda | Me explicó que el if tiene que ir dentro de un for porque usa i, y me dio el bloque completo del máximo | Lo copié, entendí que se guarda la posición para luego sacar el nombre y el precio, y comprobé que sale Monitor (189.00 €) |

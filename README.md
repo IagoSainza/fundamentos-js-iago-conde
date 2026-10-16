@@ -26,3 +26,14 @@
 - Para calcular el descuento usé la misma formula que la usada en el ej.1 con el iva.
 - Me bloqueé con los gastos de envío y la IA me explicó que solo guardan 0 o 4.95 (ver IA.md)
 - Despues de calcular los gastos de envío hice el console.log para que salgan todos los datos reflejados en el orden correcto como se pide, también agregué const y nombres a los descuentos por si en el futuro cambiaran.
+
+## Ejercicio 3 · Explorar el catálogo.
+
+- Para ejecutarlo: `node ejercicio-3/catalogo.js`
+- Le pedí a la IA que me diera el pseudocodigo como apoyo.
+- Me lo tuvo que explicar bien la ia y mirar mis apuntes, sinceramente sin la ia no habría conseguido hacer el ejercicio.
+- Los productos, precios y stock estan en tres arrays y cada producto esta en la misma posicion en los tres, por eso use un for con la i para ir recorriendo los tres a la vez.
+- Lo que mas me costó fue el console.log del catalogo porque no sabia bien que iba dentro de ${} y que iba fuera, la ia me escribió la linea del AGOTADO de ejemplo y con eso hice yo la de las unidades, ahi entendí que dentro van las variables y fuera el texto.
+- Para contar los agotados empecé el contador en 0 y le sumo 1 cada vez que el stock es 0, al principio puse i++ en vez de sumarle al contador y me di cuenta de que la i es la que va pasando por los productos y no hay que tocarla.
+- Con el producto mas caro me lié porque puse el if fuera del bucle y no funcionaba, la ia me explicó que tiene que ir dentro porque usa la i y me dio el bloque. Se guarda la posicion del mas caro y no el precio porque con la posicion saco el nombre y el precio.
+- El valor del inventario lo hice yo, empieza en 0 y en cada vuelta suma el precio por el stock de cada producto, los agotados suman 0 solos.
