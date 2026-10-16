@@ -37,12 +37,23 @@ const precios = [45.99, 19.90, 189.00, 59.95, 34.50];
 
 const stock = [10, 25, 3, 0, 7];
 // IA: le pedí el pseudocodigo como apoyo. (ver IA.md, 16/10)
+
 let agotados = 0;
 for (let i = 0; i < productos.length; i++) {
+    
 if (stock[i] === 0) {
+    // IA: me escribió esta línea como ejemplo de template string (ver IA.md, 16/10)
     console.log(`${productos[i]} - ${precios[i].toFixed(2)} € (AGOTADO)`)
     agotados = agotados +1
 }else {
     console.log(`${productos[i]} - ${precios[i].toFixed(2)} € (${stock[i]} uds)`)
 }}
 console.log(`Productos agotados: ${agotados}`);
+// IA: me dio el bucle para buscar el más caro y me explicó por qué se guarda la posición y no el precio (ver IA.md, 16/10)
+let posicionMasCaro = 0;
+
+for (let i = 0; i < productos.length; i++) {
+if (precios[i] > precios[posicionMasCaro]) {
+    posicionMasCaro = i;}}
+ 
+ console.log(`Producto más caro: ${productos[posicionMasCaro]} (${precios[posicionMasCaro].toFixed(2)} €)`);
