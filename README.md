@@ -37,3 +37,13 @@
 - Para contar los agotados empecé el contador en 0 y le sumo 1 cada vez que el stock es 0, al principio puse i++ en vez de sumarle al contador y me di cuenta de que la i es la que va pasando por los productos y no hay que tocarla.
 - Con el producto mas caro me lié porque puse el if fuera del bucle y no funcionaba, la ia me explicó que tiene que ir dentro porque usa la i y me dio el bloque. Se guarda la posicion del mas caro y no el precio porque con la posicion saco el nombre y el precio.
 - El valor del inventario lo hice yo, empieza en 0 y en cada vuelta suma el precio por el stock de cada producto, los agotados suman 0 solos.
+
+## Ejercicio 4 · Buscar un producto.
+
+- Para ejecutarlo: `node ejercicio-4/buscar.js`
+- Le pedí a la ia el pseudocodigo y despues uno mas detallado que me dijera linea a linea que iba en el codigo, porque con el primero no me aclaraba.
+- Al principio puse el -1 en la i del for en vez de en posicion, la ia me explicó que la i siempre empieza en 0 porque es la que recorre los productos, y que posicion empieza en -1 porque significa que todavia no lo he encontrado, si empezara en 0 no sabria si es que no está o si es el Teclado que está en la posicion 0.
+- Dentro del for primero copié la suma del inventario del ejercicio 3 y despues comparaba posicion con buscado y guardaba buscado[i], la ia me dio las dos lineas del if y me explicó que hay que comparar el nombre de cada producto con el que busco y guardar la i, que es el numero de la posicion.
+- No entendia como funcionaba el if y else del final, la ia me puso un ejemplo de un cine con un asiento y ahi entendí que el if pregunta una sola vez y el ${} escribe lo que ya está guardado en la variable, con eso escribí yo el if y else del ejercicio.
+- Me liaba con los [] porque los ponia en todo, me di cuenta de que solo van en los arrays y que fuera del for la i ya no existe, por eso se usa posicion para sacar el precio y el stock. Tambien me equivoqué y puse el toFixed(2) en el stock en vez de en el precio.
+- Hice el reto opcional de las mayusculas poniendo toLowerCase() en los dos lados de la comparacion, por eso ahora monitor y MONITOR tambien encuentran el Monitor aunque en la tabla del enunciado ponga -1, y en el resultado pongo el nombre como está en el catalogo.
