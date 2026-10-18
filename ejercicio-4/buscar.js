@@ -16,4 +16,8 @@ for (let i = 0; i < productos.length; i++) {
     posicion = i;
    }
 }
-console.log(posicion);
+if (posicion === -1) {
+    console.log(`Posición: -1. ${buscado} no existe en el catálogo`);
+} else {
+    console.log(`${buscado} está en la posición ${posicion}. Precio: ${precios[posicion].toFixed(2)} €. Stock: ${stock[posicion]}`);
+}
