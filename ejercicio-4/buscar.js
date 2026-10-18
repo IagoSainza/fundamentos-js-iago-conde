@@ -12,12 +12,16 @@ const buscado = "Monitor";
 let posicion = -1;
 for (let i = 0; i < productos.length; i++) {
     // IA: me dio el if de la búsqueda (productos[i] === buscado y posicion = i) y me explicó por qué (ver IA.md, 17/10)
-   if (productos[i] === buscado) {
+    // Para el reto de las mayúsculas me dio la línea con toLowerCase() en los dos lados (ver IA.md, 18/10)
+
+   if (productos[i].toLowerCase() === buscado.toLowerCase()) {
     posicion = i;
    }
 }
 if (posicion === -1) {
     console.log(`Posición: -1. ${buscado} no existe en el catálogo`);
 } else {
-    console.log(`${buscado} está en la posición ${posicion}. Precio: ${precios[posicion].toFixed(2)} €. Stock: ${stock[posicion]}`);
+    // IA: me corrigió esta línea (usar posicion fuera del for y el toFixed en el precio) (ver IA.md, 18/10)
+
+    console.log(`${productos[posicion]} está en la posición ${posicion}. Precio: ${precios[posicion].toFixed(2)} €. Stock: ${stock[posicion]}`);
 }
