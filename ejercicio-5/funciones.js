@@ -83,3 +83,15 @@ function calcularEnvio(importe){
 console.log(calcularEnvio(49.40)); //4.95
 console.log(calcularEnvio(50)); //0
 console.log(calcularEnvio(108)); //0
+// IA: me dio el pseudocódigo y me corrigió: quitar los console.log del ej. 3, usar stock.length, el return que faltaba y que agotados va sin [i] (ver IA.md, 20/10)
+function contarAgotados(stock){
+    let agotados = 0;
+    for (let i = 0; i < stock.length; i++){
+        if (stock[i] === 0){
+            agotados = agotados +1;
+        }
+    }
+    return agotados;
+}
+console.log(contarAgotados(stock)); //1
+console.log(contarAgotados([0, 5, 0, 2])); //2
