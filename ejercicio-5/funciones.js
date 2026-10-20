@@ -95,3 +95,15 @@ function contarAgotados(stock){
 }
 console.log(contarAgotados(stock)); //1
 console.log(contarAgotados([0, 5, 0, 2])); //2
+// IA: me dio el pseudocódigo y me corrigió el parámetro precios, el for incompleto, la errata de porductos y las llamadas (le pasaba el resultado en vez de los arrays) (ver IA.md, 20/10)
+function productoMasCaro(productos, precios){
+    let posicionMasCaro = 0;
+    for (let i = 0; i < precios.length; i++){
+        if (precios[i] > precios[posicionMasCaro]){
+            posicionMasCaro = i;
+        }
+    }
+    return productos[posicionMasCaro];
+}
+console.log(productoMasCaro(productos, precios)); //Monitor
+console.log(productoMasCaro(["Zelda", "Mario kart", "Smash Bros"], [55, 45, 50])); //Zelda
