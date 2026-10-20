@@ -107,3 +107,13 @@ function productoMasCaro(productos, precios){
 }
 console.log(productoMasCaro(productos, precios)); //Monitor
 console.log(productoMasCaro(["Zelda", "Mario kart", "Smash Bros"], [55, 45, 50])); //Zelda
+// IA: me dio el pseudocódigo y me ayudó comparándola con contarAgotados: quitar el if, sumar precio × stock en vez de 1, el i++ del for y las erratas de precios (ver IA.md, 20/10)
+function valorInventario(precios, stock){
+    let total = 0;
+    for (let i = 0; i < precios.length; i++){
+        total = total + precios[i] * stock[i];
+    }
+    return total;
+}
+console.log(valorInventario(precios, stock)); // 1765.9
+console.log(valorInventario([10, 20, 30], [1, 2, 3]));  // 140
