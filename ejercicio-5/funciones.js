@@ -117,3 +117,15 @@ function valorInventario(precios, stock){
 }
 console.log(valorInventario(precios, stock)); // 1765.9
 console.log(valorInventario([10, 20, 30], [1, 2, 3]));  // 140
+// IA: me dio el pseudocódigo y me corrigió que el for empieza en 0 y no en -1, que faltaba el if y que para comparar es === y no = (ver IA.md, 20/10)
+function buscarProducto(productos, nombre){
+    let posicion = -1;
+    for (let i = 0; i < productos.length; i++){
+        if (productos[i] === nombre){
+            posicion = i;
+        }
+    }
+    return posicion;
+}
+console.log(buscarProducto(productos, "Monitor"));   // 2
+console.log(buscarProducto(productos, "Altavoz"));   // -1
