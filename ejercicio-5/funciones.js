@@ -56,3 +56,18 @@ function calcularIVA(importe){
 }
 console.log(calcularIVA(378)); //79.38
 console.log(calcularIVA(100)); //21
+// IA: me dio el pseudocódigo y me corrigió el ; después del if y el else sin paréntesis (ver IA.md, 20/10)
+function calcularDescuento(importe){
+    if (importe > 100){
+        return importe * 10 / 100;
+    }
+    else if (importe > 50){
+        return importe * 5 / 100;
+    }
+    else {
+        return 0;
+    }
+}
+console.log(calcularDescuento(120));
+console.log(calcularDescuento(100));
+console.log(calcularDescuento(50));

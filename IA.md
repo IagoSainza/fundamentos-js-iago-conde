@@ -12,3 +12,4 @@
 | 18/10 | Ej. 4 | Claude | Le pregunté por el reto de las mayúsculas | Me explicó que .toLowerCase() va vacío y en los dos lados de la comparación | Lo hice y probé con monitor y MONITOR |
 | 20/10 | Ej. 5 | Claude | Le pedí el pseudocodigo de calcularImporteLinea | Me dio los pasos en castellano: que recibe precio y cantidad y devuelve la multiplicacion | Lo pasé a JS y me corrigió los paréntesis que me faltaban en los console.log y añadí las llamadas de prueba |
 | 20/10 | Ej. 5 | Claude | Le pedí el pseudocodigo | Me explicó porque salía Nan, le di un dato a una función que esperaba dos | Me explicó que porcentajeIva ya no existía porque lo había quitado de los parámetros pero seguía en el return, y puse el 21 |
+| 20/10 | Ej. 5 | Claude | Le pedí el pseudocodigo de calcularDescuento | Me dio los pasos con si / si no, si / si no y los casos limite para probar (120, 100, 75, 50) | La escribí yo y me corrigió el ; despues del if y el else que no lleva parentesis |
