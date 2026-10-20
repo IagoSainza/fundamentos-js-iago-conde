@@ -47,3 +47,19 @@
 - No entendia como funcionaba el if y else del final, la ia me puso un ejemplo de un cine con un asiento y ahi entendí que el if pregunta una sola vez y el ${} escribe lo que ya está guardado en la variable, con eso escribí yo el if y else del ejercicio.
 - Me liaba con los [] porque los ponia en todo, me di cuenta de que solo van en los arrays y que fuera del for la i ya no existe, por eso se usa posicion para sacar el precio y el stock. Tambien me equivoqué y puse el toFixed(2) en el stock en vez de en el precio.
 - Hice el reto opcional de las mayusculas poniendo toLowerCase() en los dos lados de la comparacion, por eso ahora monitor y MONITOR tambien encuentran el Monitor aunque en la tabla del enunciado ponga -1, y en el resultado pongo el nombre como está en el catalogo.
+
+## Ejercicio 5 · Refactorizar en funciones.
+
+- Para ejecutarlo: `node ejercicio-5/funciones.js`
+- En este ejercicio cogí lo que ya tenia hecho en los ejercicios 1 a 4 y lo metí en funciones, para poder usarlo con datos distintos sin repetir el codigo. Son las 8 funciones que pide el enunciado y todas devuelven el resultado con return, ninguna tiene console.log dentro, los console.log van fuera cuando las llamo.
+- Primero pegué el enunciado y los tres arrays del ejercicio 3 y despues hice un commit por cada funcion que me funcionaba.
+- Le pedí a la ia el pseudocodigo de cada funcion y yo lo iba pasando a JS, y cuando algo fallaba me explicaba el error.
+- Cada funcion la llamo minimo dos veces con datos distintos y al lado puse un comentario con lo que tiene que dar para comprobarlo. Algunas pruebas las hice con arrays inventados, como los precios de unos juegos, para ver que funcionan con cualquier lista y no solo con la de la tienda.
+- En calcularIVA puse dos parametros pero al llamarla solo le pasaba uno y me salia NaN. Despues quité el segundo de los parentesis pero se me quedó porcentajeIva dentro del return y daba error porque ya no existia, al final puse el 21 directamente porque siempre es el mismo.
+- En calcularDescuento me dejé un ; despues del if y eso hace que el if no sirva para nada, puse >= cuando la regla dice "mas de 100" y le puse parentesis al else, que no lleva. Aprendí que se puede poner un return en cada camino del if porque cuando llega a uno la funcion se acaba ahi.
+- En calcularEnvio la regla es "50 o mas" asi que aqui si va >=. Hay que pasarle el importe que ya tiene el descuento quitado, por eso el ejemplo del enunciado es 49.40.
+- En contarAgotados me quedé en blanco y copié el for del ejercicio 3 con los console.log. Tambien recorria productos.length en vez de stock.length, se me olvidó el return y luego puse agotados[i] cuando agotados es un numero y no un array, y la i fuera del for ya no existe.
+- En productoMasCaro al probarla le pasaba "Monitor" en vez de los arrays, me di cuenta de que Monitor es lo que tiene que devolver, no lo que le paso. Igual que en el ej 3 guardo la posicion y no el precio porque con la posicion saco el nombre.
+- En valorInventario me lié bastante, puse la suma dentro del parentesis del for en vez del i++ y un if que no hacia falta. Me ayudó compararla con contarAgotados porque es casi igual pero sumando precio por stock en vez de 1.
+- En buscarProducto volví a empezar el for en -1 en vez de 0 como en el ej 4 y puse = en vez de ===. Me di cuenta de que = guarda un valor y === compara. Aqui no puse el toLowerCase() del reto porque no lo pide.
+- Lo que mas me ha servido es entender que el return devuelve el valor para usarlo fuera y el console.log solo lo enseña, y que estas funciones son las piezas del obligatorio.
