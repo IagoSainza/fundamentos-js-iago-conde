@@ -43,3 +43,10 @@ const productos = ["Teclado", "Ratón", "Monitor", "Auriculares", "Webcam"];
 const precios = [45.99, 19.90, 189.00, 59.95, 34.50];
 
 const stock = [10, 25, 3, 0, 7];
+// IA: me dio el pseudocódigo de esta función y yo lo pasé a JS (ver IA.md, 20/10)
+function calcularImporteLinea(precio, cantidad) {
+    return precio * cantidad;
+}
+console.log(calcularImporteLinea(189, 2)); //378
+console.log(calcularImporteLinea(15.5, 2)); // 31
+console.log(calcularImporteLinea(10, 5)); // 50

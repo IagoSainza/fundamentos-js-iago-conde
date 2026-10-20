@@ -10,3 +10,4 @@
 | 18/10 | Ej. 4 | Claude | No entendía cómo funcionaba el if / else del resultado | Me puso un ejemplo de un cine con un asiento y me explicó que el if pregunta una sola vez y ${} escribe el valor guardado | Con ese ejemplo escribí yo el if / else del ejercicio |
 | 18/10 | Ej. 4 | Claude | Usaba [i] fuera del bucle y en buscado y posicion | Me explicó que [ ] solo va en los arrays y que fuera del for se usa posicion | Lo corregí y probé los 4 casos del enunciado |
 | 18/10 | Ej. 4 | Claude | Le pregunté por el reto de las mayúsculas | Me explicó que .toLowerCase() va vacío y en los dos lados de la comparación | Lo hice y probé con monitor y MONITOR |
+| 20/10 | Ej. 5 | Claude | Le pedí el pseudocodigo de calcularImporteLinea | Me dio los pasos en castellano: que recibe precio y cantidad y devuelve la multiplicacion | Lo pasé a JS y me corrigió los paréntesis que me faltaban en los console.log y añadí las llamadas de prueba |
