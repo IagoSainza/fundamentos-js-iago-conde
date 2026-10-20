@@ -50,3 +50,9 @@ function calcularImporteLinea(precio, cantidad) {
 console.log(calcularImporteLinea(189, 2)); //378
 console.log(calcularImporteLinea(15.5, 2)); // 31
 console.log(calcularImporteLinea(10, 5)); // 50
+// IA: me dio el pseudocódigo y me corrigió los parámetros (tenía dos y era uno) (ver IA.md, 20/10)
+function calcularIVA(importe){
+    return importe * 21 / 100;
+}
+console.log(calcularIVA(378)); //79.38
+console.log(calcularIVA(100)); //21
