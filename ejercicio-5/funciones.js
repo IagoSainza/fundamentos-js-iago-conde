@@ -68,6 +68,18 @@ function calcularDescuento(importe){
         return 0;
     }
 }
-console.log(calcularDescuento(120));
-console.log(calcularDescuento(100));
-console.log(calcularDescuento(50));
+console.log(calcularDescuento(120)); //12
+console.log(calcularDescuento(100)); //5
+console.log(calcularDescuento(50)); //0
+// IA: me dio el pseudocódigo de esta función y yo lo pasé a JS (ver IA.md, 20/10)
+function calcularEnvio(importe){
+    if (importe >= 50){
+        return 0;
+    }
+    else {
+        return 4.95;
+    }
+}
+console.log(calcularEnvio(49.40)); //4.95
+console.log(calcularEnvio(50)); //0
+console.log(calcularEnvio(108)); //0
