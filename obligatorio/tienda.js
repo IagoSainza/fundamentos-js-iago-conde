@@ -49,3 +49,13 @@ function calcularEnvio(importe){
         return 4.95;
     }
 }
+// IA: este bucle viene del ejercicio 3, donde me escribió la línea del AGOTADO como ejemplo (ver IA.md, 16/10).
+// Aquí me dijo que lo copiara sin el contador de agotados porque eso va al final con el stock actualizado (ver IA.md, 21/10)
+console.log("=== CATÁLOGO ===");
+for (let i = 0; i < productos.length; i++) {
+    
+if (stock[i] === 0) {
+    console.log(`${productos[i]} - ${precios[i].toFixed(2)} € (AGOTADO)`)
+}else {
+    console.log(`${productos[i]} - ${precios[i].toFixed(2)} € (${stock[i]} uds)`)
+}}
