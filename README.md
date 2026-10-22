@@ -1,5 +1,3 @@
-# fundamentos-js-iago-conde
-
 # Fundamentos JS · Iago Conde
 
 ## Ejercicio 1 · Ticket de un producto
