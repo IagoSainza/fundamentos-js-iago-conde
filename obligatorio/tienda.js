@@ -59,3 +59,20 @@ if (stock[i] === 0) {
 }else {
     console.log(`${productos[i]} - ${precios[i].toFixed(2)} € (${stock[i]} uds)`)
 }}
+// IA: me dio el pseudocódigo y me explicó la diferencia entre i (la línea del pedido) y posicion (dónde está en el catálogo).
+// Me corrigió pedidoProductos.length, el [i], la cantidad, los === y los mensajes con ${} (ver IA.md, 22/10)
+console.log("=== PROCESANDO PEDIDO ===")
+for (let i = 0; i < pedidoProductos.length; i++){ 
+    const nombre = pedidoProductos[i]
+    const cantidad = pedidoCantidades[i]
+    const posicion = buscarProducto(productos, nombre)
+
+    if (posicion === -1){
+        console.log (`AVISO: ${nombre} no existe en el catálogo`);
+    }
+    else if (stock[posicion] === 0){
+        console.log (`AVISO: ${nombre} está agotado`);
+    }
+    else {
+    }
+}
