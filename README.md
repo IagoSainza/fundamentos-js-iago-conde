@@ -63,3 +63,17 @@
 - En valorInventario me lié bastante, puse la suma dentro del parentesis del for en vez del i++ y un if que no hacia falta. Me ayudó compararla con contarAgotados porque es casi igual pero sumando precio por stock en vez de 1.
 - En buscarProducto volví a empezar el for en -1 en vez de 0 como en el ej 4 y puse = en vez de ===. Me di cuenta de que = guarda un valor y === compara. Aqui no puse el toLowerCase() del reto porque no lo pide.
 - Lo que mas me ha servido es entender que el return devuelve el valor para usarlo fuera y el console.log solo lo enseña, y que estas funciones son las piezas del obligatorio.
+
+## Ejercicio obligatorio · Tienda online en consola.
+
+- Para ejecutarlo: `node obligatorio/tienda.js`
+- Le pedí a la ia que me dividiera el enunciado en pasos pequeños y fui haciendo un commit por cada paso que funcionaba.
+- Primero copié los datos del enunciado y las 5 funciones del ejercicio 5 que pide el obligatorio (buscarProducto, calcularImporteLinea, calcularDescuento, calcularIVA y calcularEnvio), sin sus console.log de prueba. Despues copié el for del catalogo del ejercicio 3 sin el contador de agotados.
+- Para procesar el pedido recorro pedidoProductos con un for y en cada vuelta busco el producto en el catalogo con buscarProducto. Lo que mas me costó entender es que hay dos posiciones: la i es la linea del pedido y posicion es donde esta el producto en el catalogo, por eso el stock y el precio se miran con [posicion] y no con [i]. Me equivoqué muchas veces poniendo stock en vez de stock[posicion].
+- El orden de los if importa: primero miro si no existe (posicion -1), luego si esta agotado y si no, se sirve. Si no comprobara primero el -1 estaria mirando stock[-1].
+- Dentro del else puse otro if para ver si piden mas de lo que hay. Empiezo servidas con la cantidad que piden y si no hay bastante la cambio por lo que hay en stock, asi el Monitor se sirven 3 aunque pidan 4. Despues resto las servidas al stock. Me lié con el let, al principio lo ponia otra vez delante de stock y creaba otra variable.
+- Para el ticket creé tres arrays vacios antes del for y con .push() voy guardando solo lo que se sirve: el nombre, las unidades servidas (no las pedidas) y el precio del catalogo. Despues los recorro con otro for, calculo el importe de cada linea con calcularImporteLinea y voy sumando el subtotal.
+- El descuento se calcula sobre el subtotal, y el IVA y el envio sobre la base imponible (subtotal menos descuento). Primero hice todos los calculos y despues todos los console.log. Me confundí pensando que el - del descuento tenia que restar algo, pero es solo texto para el ticket. El envio lleva un if para que ponga Gratis cuando es 0.
+- Para los agotados del final uso un array vacio y le hago .push() de los productos que tienen stock 0, y los muestro con .join(", ") que la ia me explicó que junta todo en un texto separado por comas.
+- Hice la segunda prueba del enunciado cambiando el pedido a 1 Ratón y salió subtotal 19.90 €, IVA 4.18 €, envio 4.95 € y total 29.03 €, igual que en el enunciado. Despues volví a dejar el pedido original.
+- Errores que tuve varias veces: poner = en vez de ===, el toFixed fuera del ${} o escrito en minuscula, y olvidarme de guardar el archivo antes de ejecutarlo.
