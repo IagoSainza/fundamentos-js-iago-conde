@@ -59,6 +59,11 @@ if (stock[i] === 0) {
 }else {
     console.log(`${productos[i]} - ${precios[i].toFixed(2)} € (${stock[i]} uds)`)
 }}
+// IA: me explicó que se crean los arrays del ticket vacíos aquí, antes del for, y se llenan con .push() en el else de abajo.
+// Me corrigió los push: van servidas (no cantidad) y precios[posicion] (no el array entero) (ver IA.md, 22/10)
+const ticketProductos = [];
+const ticketCantidades = [];
+const ticketPrecios = [];
 // IA: me dio el pseudocódigo y me explicó la diferencia entre i (la línea del pedido) y posicion (dónde está en el catálogo).
 // Me corrigió pedidoProductos.length, el [i], la cantidad, los === y los mensajes con ${} (ver IA.md, 22/10)
 console.log("=== PROCESANDO PEDIDO ===")
@@ -85,6 +90,18 @@ for (let i = 0; i < pedidoProductos.length; i++){
             console.log(`OK: ${cantidad} x ${nombre}`)
         }
         stock[posicion] = stock[posicion] - servidas;
+        ticketProductos.push(nombre);
+        ticketCantidades.push(servidas);
+        ticketPrecios.push(precios[posicion]);
     }
 }
-
+// IA: me dio el pseudocódigo para recorrer el ticket y sumar el subtotal.
+// Me corrigió el toFixed dentro del ${}, el importe que había puesto como precio, el let que sobraba en subtotal y la comilla sin cerrar (ver IA.md, 22/10)
+console.log(`=== TICKET ===`);
+let subtotal = 0;
+for (let i = 0; i < ticketProductos.length; i++){
+    const importe = calcularImporteLinea(ticketPrecios[i], ticketCantidades[i])
+    console.log(`${ticketCantidades[i]} x ${ticketProductos[i]} (${ticketPrecios[i].toFixed(2)} €) = ${importe.toFixed(2)} €`)
+    subtotal = subtotal + importe;
+}
+console.log(`Subtotal: ${subtotal.toFixed(2)} €`);
