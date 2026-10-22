@@ -73,6 +73,18 @@ for (let i = 0; i < pedidoProductos.length; i++){
     else if (stock[posicion] === 0){
         console.log (`AVISO: ${nombre} está agotado`);
     }
+    // IA: me dio el pseudocódigo y me corrigió: stock[posicion] en vez de stock, crear servidas fuera del if,
+    // y que para restar el stock es una asignación sin let ni ${} (ver IA.md, 22/10)
     else {
+         let servidas = cantidad;
+        if (cantidad > stock[posicion]){
+            servidas = stock[posicion];
+            console.log (`AVISO: solo hay ${servidas} uds de ${nombre}, se sirven ${servidas}`)
+        }
+        else {
+            console.log(`OK: ${cantidad} x ${nombre}`)
+        }
+        stock[posicion] = stock[posicion] - servidas;
     }
 }
+
