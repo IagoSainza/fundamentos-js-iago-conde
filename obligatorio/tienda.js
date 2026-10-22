@@ -122,3 +122,14 @@ else {
     console.log(`Envio: ${envio.toFixed(2)} €`)
 }
 console.log(`TOTAL: ${total.toFixed(2)} €`)
+// IA: me explicó que con un solo array vacío y .push() en el for se apuntan los agotados, y me enseñó .join(", ") para mostrarlos.
+// Me corrigió el for (productos.length y no ticketProductos), las comillas del console.log y el ${} y el = del if (ver IA.md, 22/10)
+const agotados = [];
+console.log(`=== STOCK ACTUALIZADO ===`)
+for(let i = 0; i < productos.length; i++){
+    console.log(`${productos[i]}: ${stock[i]}`);
+    if (stock[i] === 0){
+      agotados.push(productos[i]); 
+    }
+}
+console.log(`Agotados: ${agotados.join(", ")}`);
