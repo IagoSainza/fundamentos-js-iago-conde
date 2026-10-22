@@ -105,3 +105,20 @@ for (let i = 0; i < ticketProductos.length; i++){
     subtotal = subtotal + importe;
 }
 console.log(`Subtotal: ${subtotal.toFixed(2)} €`);
+// IA: me dio el pseudocódigo y las reglas de sobre qué se calcula cada cosa (descuento sobre el subtotal, IVA y envío sobre la base).
+// Me explicó que el - del descuento es solo texto, y me corrigió el € dentro del ${}, los tofixed en minúscula y el if para mostrar Gratis (ver IA.md, 22/10)
+const descuento = calcularDescuento(subtotal);
+const base = subtotal - descuento;
+const iva = calcularIVA(base);
+const envio = calcularEnvio(base);
+const total = base + iva + envio;
+console.log(`Descuento: -${descuento.toFixed(2)} €`);
+console.log(`Base imponible: ${base.toFixed(2)} €`);
+console.log(`IVA (21%): ${iva.toFixed(2)} €`)
+if (envio === 0){
+    console.log(`Envio: Gratis`)
+}
+else {
+    console.log(`Envio: ${envio.toFixed(2)} €`)
+}
+console.log(`TOTAL: ${total.toFixed(2)} €`)
